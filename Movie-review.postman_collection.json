@@ -1,0 +1,374 @@
+{
+	"info": {
+		"_postman_id": "1155c1a8-7fcd-483b-b3a2-e7262e44802f",
+		"name": "Movie-review",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25560766"
+	},
+	"item": [
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"Reda\",\r\n    \"email\": \"Reda@gmail.com\",\r\n    \"password\": \"password\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"Reda@gmail.com\",\r\n    \"password\": \"password\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add A Movie",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NWM4M2U0OTFhM2Y5NGEyYzBmNzNhYSIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzE3NzgyMDc5LCJleHAiOjE3MTc3OTY0Nzl9.8gfzKw-M5clqmoi0_8vpuX9JinMVu_nYyJeYMRptHI0"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"title\":\"Tev\", \"director\":\"Reds\", \"releaseYear\":1996, \"genre\":\"Action\" }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/movies",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"movies"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Movies",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NWM4M2U0OTFhM2Y5NGEyYzBmNzNhYSIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzE3NzgyMDc5LCJleHAiOjE3MTc3OTY0Nzl9.8gfzKw-M5clqmoi0_8vpuX9JinMVu_nYyJeYMRptHI0"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"title\":\"Tev\", \"director\":\"Reds\", \"releaseYear\":1996, \"genre\":\"Action\" }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/movies",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"movies"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get A Movie",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NWM4M2U0OTFhM2Y5NGEyYzBmNzNhYSIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzE3NzgyMDc5LCJleHAiOjE3MTc3OTY0Nzl9.8gfzKw-M5clqmoi0_8vpuX9JinMVu_nYyJeYMRptHI0"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/movies/6663471bdf6f0de46f5c2e4a",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"movies",
+						"6663471bdf6f0de46f5c2e4a"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Movie's Reviews",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NWM4M2U0OTFhM2Y5NGEyYzBmNzNhYSIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzE3NzgyMDc5LCJleHAiOjE3MTc3OTY0Nzl9.8gfzKw-M5clqmoi0_8vpuX9JinMVu_nYyJeYMRptHI0"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/movies/6663471bdf6f0de46f5c2e4a",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"movies",
+						"6663471bdf6f0de46f5c2e4a"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update A Movie",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NWM4M2U0OTFhM2Y5NGEyYzBmNzNhYSIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzE3NzgyMDc5LCJleHAiOjE3MTc3OTY0Nzl9.8gfzKw-M5clqmoi0_8vpuX9JinMVu_nYyJeYMRptHI0"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"title\":\"Tev\", \"director\":\"Reds\", \"releaseYear\":1989, \"genre\":\"Action\" }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/movies/6663471bdf6f0de46f5c2e4a",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"movies",
+						"6663471bdf6f0de46f5c2e4a"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Movie And Its Reviews",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NWM4M2U0OTFhM2Y5NGEyYzBmNzNhYSIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzE3NzgyMDc5LCJleHAiOjE3MTc3OTY0Nzl9.8gfzKw-M5clqmoi0_8vpuX9JinMVu_nYyJeYMRptHI0"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/movies/66634be9ec0ecfce80058125",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"movies",
+						"66634be9ec0ecfce80058125"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post A Review",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NWM4M2U0OTFhM2Y5NGEyYzBmNzNhYSIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzE3NzgyMDc5LCJleHAiOjE3MTc3OTY0Nzl9.8gfzKw-M5clqmoi0_8vpuX9JinMVu_nYyJeYMRptHI0"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"movieId\":\"6663471bdf6f0de46f5c2e4a\", \"userId\":\"665c83e491a3f94a2c0f73aa\", \"rating\":1, \"comment\":\"Sucks!\" }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/reviews",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"reviews"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All The Reviews",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NWM4M2U0OTFhM2Y5NGEyYzBmNzNhYSIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzE3NzgyMDc5LCJleHAiOjE3MTc3OTY0Nzl9.8gfzKw-M5clqmoi0_8vpuX9JinMVu_nYyJeYMRptHI0"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/reviews",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"reviews"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get A Review",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NWM4M2U0OTFhM2Y5NGEyYzBmNzNhYSIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzE3NzgyMDc5LCJleHAiOjE3MTc3OTY0Nzl9.8gfzKw-M5clqmoi0_8vpuX9JinMVu_nYyJeYMRptHI0"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/movies/6663471bdf6f0de46f5c2e4a",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"movies",
+						"6663471bdf6f0de46f5c2e4a"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update A Review",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NWM4M2U0OTFhM2Y5NGEyYzBmNzNhYSIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzE3NzgyMDc5LCJleHAiOjE3MTc3OTY0Nzl9.8gfzKw-M5clqmoi0_8vpuX9JinMVu_nYyJeYMRptHI0"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"rating\":\"3\", \"comment\":\"Better\" }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/reviews/6663523cec0ecfce8005813d",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"reviews",
+						"6663523cec0ecfce8005813d"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete A Review",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NWM4M2U0OTFhM2Y5NGEyYzBmNzNhYSIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzE3NzgyMDc5LCJleHAiOjE3MTc3OTY0Nzl9.8gfzKw-M5clqmoi0_8vpuX9JinMVu_nYyJeYMRptHI0"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/reviews/66635005ec0ecfce8005812d",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"reviews",
+						"66635005ec0ecfce8005812d"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
